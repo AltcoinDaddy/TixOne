@@ -18,12 +18,12 @@ export function Footer() {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Logo and info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mr-3">
+            <div className="flex items-center mb-8 space-x-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center shadow-lg">
                 <Ticket className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -32,62 +32,64 @@ export function Footer() {
               </div>
             </div>
 
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-400 mb-8 max-w-md text-base leading-relaxed">
               TixOne revolutionizes sports ticketing with blockchain technology, fan tokens, and NFTs. Experience the
               future of sports event access and digital collectibles.
             </p>
 
-            <div className="flex space-x-5 mb-8">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            <div className="flex space-x-6 mb-10">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-gray-800">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </a>
             </div>
 
             {/* Newsletter */}
-            <div className="bg-gray-800 p-5 rounded-xl">
-              <h4 className="text-white font-medium mb-2">Stay Updated</h4>
-              <p className="text-sm text-gray-400 mb-3">Subscribe to our newsletter for the latest updates.</p>
-              <div className="flex gap-2">
+            <div className="bg-gray-800 p-6 rounded-2xl">
+              <h4 className="text-white font-semibold mb-3 text-lg">Stay Updated</h4>
+              <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                Subscribe to our newsletter for the latest updates and exclusive offers.
+              </p>
+              <div className="flex gap-3">
                 <input
                   type="email"
-                  placeholder="Your email"
-                  className="flex-1 bg-gray-700 text-white placeholder-gray-400 px-3 py-2 rounded-lg border-0 focus:ring-1 focus:ring-red-500"
+                  placeholder="Your email address"
+                  className="flex-1 bg-gray-700 text-white placeholder-gray-400 px-4 py-3 rounded-xl border-0 focus:ring-2 focus:ring-red-500 focus:outline-none"
                 />
-                <Button className="bg-red-600 hover:bg-red-700">Subscribe</Button>
+                <Button className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-xl font-semibold">Subscribe</Button>
               </div>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-5">Platform</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold text-white mb-6">Platform</h4>
+            <ul className="space-y-4">
               <li>
-                <Link href="/events" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/events" className="text-gray-400 hover:text-white transition-colors text-base">
                   Browse Events
                 </Link>
               </li>
               <li>
-                <Link href="/marketplace" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/marketplace" className="text-gray-400 hover:text-white transition-colors text-base">
                   Marketplace
                 </Link>
               </li>
               <li>
-                <Link href="/my-tickets" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/my-tickets" className="text-gray-400 hover:text-white transition-colors text-base">
                   My Tickets
                 </Link>
               </li>
               <li>
-                <Link href="/create-event" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/create-event" className="text-gray-400 hover:text-white transition-colors text-base">
                   For Organizers
                 </Link>
               </li>
@@ -96,25 +98,25 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-5">Resources</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold text-white mb-6">Resources</h4>
+            <ul className="space-y-4">
               <li>
-                <Link href="/how-it-works" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/how-it-works" className="text-gray-400 hover:text-white transition-colors text-base">
                   How It Works
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors text-base">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/support" className="text-gray-400 hover:text-white transition-colors text-base">
                   Support
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors text-base">
                   Blog
                 </Link>
               </li>
@@ -123,25 +125,25 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-5">Legal</h4>
-            <ul className="space-y-3">
+            <h4 className="text-lg font-semibold text-white mb-6">Legal</h4>
+            <ul className="space-y-4">
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-base">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-base">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors text-base">
                   Cookie Policy
                 </Link>
               </li>
               <li>
-                <Link href="/compliance" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/compliance" className="text-gray-400 hover:text-white transition-colors text-base">
                   Compliance
                 </Link>
               </li>
@@ -149,8 +151,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} TixOne. All rights reserved.</p>
+        <div className="border-t border-gray-800 mt-16 pt-8 text-center">
+          <p className="text-gray-400 text-base">© {new Date().getFullYear()} TixOne. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -11,7 +11,9 @@ import { View3dIcon } from "@/components/view-3d-icon"
 
 export default function EventsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-20 md:pt-24">
+      {" "}
+      {/* Add top padding */}
       {/* Hero Banner */}
       <section className="relative h-[300px] overflow-hidden bg-gradient-to-r from-gray-900 to-black">
         {/* Background pattern */}
@@ -53,7 +55,6 @@ export default function EventsPage() {
           </svg>
         </div>
       </section>
-
       <div className="container px-4 pt-4 pb-16 mx-auto">
         {/* Filters & Controls Row */}
         <div className="flex flex-col justify-between gap-4 mb-8 md:flex-row md:items-center">
