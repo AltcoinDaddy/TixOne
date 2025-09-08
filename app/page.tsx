@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import Link from "next/link"
-import { ArrowRight, Sparkles, Ticket, Wallet } from "lucide-react"
+import { ArrowRight, Ticket, Wallet } from "lucide-react"
 import { motion, useInView } from "framer-motion"
 
 import { Button } from "@/components/ui/button"
@@ -40,15 +40,6 @@ export default function Home() {
               transition={{ duration: 0.7 }}
               className="max-w-xl"
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center px-3 py-1 mb-6 text-sm font-medium rounded-full bg-red-500/10 text-red-300"
-              >
-                <Sparkles className="w-4 h-4 mr-2" /> The Future of Sports Ticketing
-              </motion.div>
-
               <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-white md:text-6xl">
                 <span className="block">Experience Sport</span>
                 <span className="relative">
@@ -75,7 +66,7 @@ export default function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800"
+                  className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 bg-transparent"
                 >
                   <Link href="/how-it-works">How It Works</Link>
                 </Button>
@@ -178,7 +169,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-gray-600"
             >
-              FanPay enhances the way you connect with your favorite teams through blockchain technology
+              TixOne enhances the way you connect with your favorite teams through blockchain technology
             </motion.p>
           </div>
 
@@ -367,7 +358,12 @@ export default function Home() {
                 <Link href="/connect">Connect Wallet</Link>
               </Button>
 
-              <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-white/30 text-white hover:bg-white/10 bg-transparent"
+              >
                 <Link href="/events">Browse Events</Link>
               </Button>
             </motion.div>

@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Bell, Menu, Trophy, Wallet, ExternalLink, User, Search } from "lucide-react"
+import { Bell, Menu, Ticket, Wallet, ExternalLink, User, Search } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { ConnectWalletButton } from "@/components/connect-wallet-button"
@@ -60,7 +60,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="flex items-center justify-center w-10 h-10 mr-2 overflow-hidden text-white rounded-full bg-gradient-to-br from-red-600 to-red-800">
-              <Trophy className="w-5 h-5" />
+              <Ticket className="w-5 h-5" />
             </div>
             <span
               className={cn(
@@ -68,7 +68,7 @@ export function Navbar() {
                 scrolled ? "text-gray-900 dark:text-white" : "text-white",
               )}
             >
-              FanPay
+              TixOne
             </span>
           </Link>
 
@@ -211,9 +211,9 @@ export function Navbar() {
                 <div className="py-8">
                   <div className="flex items-center mb-8">
                     <div className="flex items-center justify-center w-10 h-10 mr-3 text-white rounded-full bg-gradient-to-br from-red-600 to-red-800">
-                      <Trophy className="w-5 h-5" />
+                      <Ticket className="w-5 h-5" />
                     </div>
-                    <span className="text-xl font-bold">FanPay</span>
+                    <span className="text-xl font-bold">TixOne</span>
                   </div>
 
                   <nav className="flex flex-col gap-2 mb-8">

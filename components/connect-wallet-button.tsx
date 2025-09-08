@@ -56,7 +56,7 @@ export function ConnectWalletButton() {
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <Button
           variant="outline"
-          className="flex items-center gap-2 border-gray-300 hover:border-red-600 hover:bg-red-50 transition-all duration-300"
+          className="flex items-center gap-2 border-gray-300 hover:border-red-600 hover:bg-red-50 transition-all duration-300 bg-transparent"
           onClick={handleDisconnect}
         >
           <Wallet className="h-4 w-4 text-red-600" />
@@ -80,7 +80,7 @@ export function ConnectWalletButton() {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">Connect your wallet</DialogTitle>
-          <DialogDescription>Choose a wallet to connect to FanPay</DialogDescription>
+          <DialogDescription>Choose a wallet to connect to TixOne</DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <WalletOption
@@ -133,7 +133,7 @@ function WalletOption({ name, description, icon, iconColor, iconBg, onClick, isL
     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
       <Button
         variant="outline"
-        className="flex justify-start items-center gap-3 h-14 w-full hover:border-red-600 hover:bg-red-50 transition-all duration-300"
+        className="flex justify-start items-center gap-3 h-14 w-full hover:border-red-600 hover:bg-red-50 transition-all duration-300 bg-transparent"
         onClick={onClick}
         disabled={isLoading}
       >

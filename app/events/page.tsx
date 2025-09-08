@@ -28,7 +28,7 @@ export default function EventsPage() {
 
         {/* Content */}
         <div className="container relative z-10 flex flex-col items-center justify-center h-full px-4 py-16 mx-auto text-center">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">Upcoming Events</h1>
+          <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">Upcoming Sports Events</h1>
           <p className="max-w-2xl mb-8 text-lg text-gray-300">
             Browse and purchase tickets for upcoming sports events using fan tokens
           </p>
@@ -59,7 +59,7 @@ export default function EventsPage() {
         <div className="flex flex-col justify-between gap-4 mb-8 md:flex-row md:items-center">
           {/* Left side filters */}
           <div className="flex flex-wrap items-center gap-2">
-            <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <Button variant="outline" size="sm" className="flex items-center gap-2 bg-transparent">
               <Filter className="w-4 h-4" /> Filters <ChevronDown className="w-4 h-4 ml-1" />
             </Button>
 
@@ -81,7 +81,7 @@ export default function EventsPage() {
               </Button>
             </div>
 
-            <Button variant="outline" size="sm" className="flex items-center gap-2">
+            <Button variant="outline" size="sm" className="flex items-center gap-2 bg-transparent">
               <span>Sort By</span> <ChevronDown className="w-4 h-4 ml-1" />
             </Button>
           </div>
@@ -282,7 +282,7 @@ export default function EventsPage() {
 
             {/* Load More */}
             <div className="flex justify-center mt-8">
-              <Button variant="outline" className="flex items-center gap-2">
+              <Button variant="outline" className="flex items-center gap-2 bg-transparent">
                 <span>Load More Events</span>
                 <ChevronRight className="w-4 h-4" />
               </Button>

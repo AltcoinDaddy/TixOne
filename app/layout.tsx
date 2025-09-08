@@ -19,9 +19,9 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "FanPay - NFT Ticketing Platform",
+  title: "TixOne - NFT Ticketing Platform",
   description: "Purchase event tickets using your favorite team's fan tokens",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Twitter, Trophy } from "lucide-react"
+import { Facebook, Instagram, Twitter, Ticket } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -24,16 +24,16 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center mr-3">
-                <Trophy className="h-6 w-6 text-white" />
+                <Ticket className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">FanPay</h3>
+                <h3 className="text-2xl font-bold text-white">TixOne</h3>
                 <p className="text-sm text-gray-400">The blockchain ticketing platform</p>
               </div>
             </div>
 
             <p className="text-gray-400 mb-6 max-w-md">
-              FanPay revolutionizes sports ticketing with blockchain technology, fan tokens, and NFTs. Experience the
+              TixOne revolutionizes sports ticketing with blockchain technology, fan tokens, and NFTs. Experience the
               future of sports event access and digital collectibles.
             </p>
 
@@ -150,7 +150,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} FanPay. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} TixOne. All rights reserved.</p>
         </div>
       </div>
     </footer>
