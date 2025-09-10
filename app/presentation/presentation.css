@@ -1,40 +1,165 @@
-.presentation-mode {
-  cursor: none;
+/* Presentation-specific styles aligned with TixOne design system */
+.presentation-layout {
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
 }
 
-.presentation-mode * {
-  user-select: none;
+/* Smooth transitions for slide changes */
+.slide-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (max-width: 768px) {
-  .presentation-mode {
-    font-size: 0.8em;
-  }
-}
-
-/* Hide scrollbars during presentation */
-.presentation-mode::-webkit-scrollbar {
+/* Custom scrollbar for presentation mode */
+.presentation-layout::-webkit-scrollbar {
   display: none;
 }
 
-.presentation-mode {
+.presentation-layout {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-/* Smooth transitions */
-.slide-transition {
-  transition: all 0.5s ease-in-out;
+/* Ensure full viewport usage */
+.presentation-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Print styles for handouts */
+/* Animation for slide indicators */
+.slide-indicator {
+  transition: all 0.3s ease;
+}
+
+.slide-indicator.active {
+  transform: scale(1.2);
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: width 0.1s linear;
+}
+
+/* TixOne brand colors for presentation */
+:root {
+  --tixone-red: #dc2626;
+  --tixone-red-dark: #b91c1c;
+  --tixone-gray: #374151;
+  --tixone-gray-light: #f3f4f6;
+}
+
+/* Responsive typography matching TixOne design */
+@media (max-width: 1024px) {
+  .presentation-title {
+    font-size: 4rem !important;
+  }
+
+  .presentation-subtitle {
+    font-size: 2rem !important;
+  }
+
+  .presentation-content {
+    font-size: 1.5rem !important;
+  }
+
+  .presentation-card {
+    padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .presentation-title {
+    font-size: 3rem !important;
+  }
+
+  .presentation-subtitle {
+    font-size: 1.5rem !important;
+  }
+
+  .presentation-content {
+    font-size: 1.25rem !important;
+  }
+
+  .presentation-card {
+    padding: 1rem !important;
+  }
+
+  /* Stack grid items on mobile */
+  .presentation-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .presentation-title {
+    font-size: 2.5rem !important;
+  }
+
+  .presentation-subtitle {
+    font-size: 1.25rem !important;
+  }
+
+  .presentation-content {
+    font-size: 1rem !important;
+  }
+}
+
+/* Print styles for backup handouts */
 @media print {
-  .presentation-mode {
+  .presentation-controls,
+  .presentation-navigation,
+  .fixed {
+    display: none !important;
+  }
+
+  .slide-content {
+    page-break-after: always;
     background: white !important;
     color: black !important;
   }
 
-  .fixed {
-    display: none !important;
+  .bg-gradient-to-r,
+  .bg-gradient-to-br {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Focus states for accessibility */
+.presentation-button:focus {
+  outline: 2px solid var(--tixone-red);
+  outline-offset: 2px;
+}
+
+/* Smooth hover transitions */
+.presentation-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.presentation-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading states */
+.presentation-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .presentation-layout {
+    --tixone-red: #ff0000;
+    --tixone-gray: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .slide-transition,
+  .presentation-card {
+    transition: none;
   }
 }

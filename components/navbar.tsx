@@ -73,6 +73,9 @@ export function Navbar() {
             <NavLink href="/dashboard" scrolled={scrolled}>
               Dashboard
             </NavLink>
+            <NavLink href="/presentation" scrolled={scrolled}>
+              Presentation
+            </NavLink>
 
             {/* Search button */}
             <Button
@@ -225,6 +228,7 @@ export function Navbar() {
                     <MobileNavLink href="/events">Events</MobileNavLink>
                     <MobileNavLink href="/marketplace">Marketplace</MobileNavLink>
                     <MobileNavLink href="/dashboard">Dashboard</MobileNavLink>
+                    <MobileNavLink href="/presentation">Presentation</MobileNavLink>
                     <MobileNavLink href="/how-it-works">How It Works</MobileNavLink>
                     <MobileNavLink href="/faq">FAQ</MobileNavLink>
                   </nav>
