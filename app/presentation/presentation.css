@@ -1,0 +1,40 @@
+.presentation-mode {
+  cursor: none;
+}
+
+.presentation-mode * {
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .presentation-mode {
+    font-size: 0.8em;
+  }
+}
+
+/* Hide scrollbars during presentation */
+.presentation-mode::-webkit-scrollbar {
+  display: none;
+}
+
+.presentation-mode {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth transitions */
+.slide-transition {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Print styles for handouts */
+@media print {
+  .presentation-mode {
+    background: white !important;
+    color: black !important;
+  }
+
+  .fixed {
+    display: none !important;
+  }
+}
